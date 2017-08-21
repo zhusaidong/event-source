@@ -2,32 +2,29 @@
 
 an event-source demo to progress bar
 
-### demo 
+### #demo 
 
 <a target="_blank" href="http://github.zhusaidong.cn/event-source/">demo</a>
 
-### how to use
+### #how to use
 
 this project simply encapsulates two files
 
 	EventSource.class.php
-
-<code>
+<pre><code>
 $eventSource = new EventSource;
-
 $lastEventId = $eventSource->getLastEventId();
-
 $eventSource
 	->setLastEventId(1)
 	->setData([])
 	->setEvent('ProgressEvent')
 	->setRetry(1000)
 	->output();
-</code>
+</code></pre>
 
 	EventSource.js
 
-<code>
+<pre><code>
 _EventSource("demo.php",
 	[
 		{
@@ -45,4 +42,4 @@ _EventSource("demo.php",
 			}
 		}
 	]);
-</code>
+</code></pre>
