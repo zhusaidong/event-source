@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+			用EventSource制作进度条demo
+		</title>
+		<meta name="author" content="zsdroid">
+		<meta charset="utf-8">
+		<script src="EventSource.js?v=1">
+		</script>
+		<script>
+			var _$ = function(id)
+			{
+				return document.querySelector(id);
+			};
+			window.onload = function()
+			{
+				var source = new _EventSource("demo.php",
+					[
+						{
+							//自定义事件
+							event:'ProgressEvent',
+							callback:function(data)
+							{
+								_$(".progressInfo").innerHTML = data[0];
+								_$(".progress").value = data[0];
+								_$('.text').innerHTML += data[1] + ' => 进度 ' + data[0] + '%' + '<br />';
+								console.log(this,this.data,this.dataArray);
+							}
+						}
+						,
+						{
+							//默认
+							callback:function(data)
+							{
+							}
+						}
+					]);
+			}
+		</script>
+	</head>
+	<body>
+		<div class="info">
+			<progress class="progress" max="100" value="0">
+			</progress>
+			<span class="progressInfo">
+				0
+			</span>%
+			<br />
+			<span class="text">
+			</span>
+		</div>
+	</body>
+</html>
