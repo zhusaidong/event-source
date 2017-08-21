@@ -30,7 +30,7 @@ $eventSource
 _EventSource("demo.php",
 	[
 		{
-			//自定义事件
+			//Custom Event
 			event:'ProgressEvent',
 			callback:function(data)
 			{
@@ -38,7 +38,7 @@ _EventSource("demo.php",
 			}
 		},
 		{
-			//默认
+			//default Event
 			callback:function(data)
 			{
 			}
