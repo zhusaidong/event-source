@@ -1,6 +1,8 @@
 # event-source
 
-an event-source demo to progress bar
+an event-source demo
+
+	use event-source to make a progress bar of demo
 
 ### #demo 
 
