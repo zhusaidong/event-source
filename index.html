@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>
-			用EventSource制作进度条demo
+			use event-source to make a progress bar of demo
 		</title>
 		<meta name="author" content="zsdroid">
 		<meta charset="utf-8">
@@ -18,19 +18,19 @@
 				_EventSource("demo.php",
 					[
 						{
-							//自定义事件
+							//Custom Event
 							event:'ProgressEvent',
 							callback:function(data)
 							{
 								_$(".progressInfo").innerHTML = data[0];
 								_$(".progress").value = data[0];
-								_$('.text').innerHTML += data[1] + ' => 进度 ' + data[0] + '%' + '<br />';
+								_$('.text').innerHTML += data[1] + ' => progress ' + data[0] + '%' + '<br />';
 								console.log(this,this.data,this.dataArray);
 							}
 						}
 						,
 						{
-							//默认
+							//default Event
 							callback:function(data)
 							{
 							}
