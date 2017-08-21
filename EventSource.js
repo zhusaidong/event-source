@@ -9,7 +9,7 @@ var _EventSource = function(sourceUrl,option)
 		throw ('your browser not support EventSource');
 	}
 	var source = new EventSource(sourceUrl);
-	//自定义event事件
+	//Custom Event
 	var customEvent = function(event,callback)
 	{
 		source.addEventListener(event,function(event)
@@ -21,7 +21,7 @@ var _EventSource = function(sourceUrl,option)
 	for(var e in option)
 	{
 		var event = option[e].event || null;
-		//没有设置event时,默认为message事件
+		//if not set event,will use 'message' event
 		customEvent((event != null || event != '') ? event : 'message',option[e].callback);
 	}
 }

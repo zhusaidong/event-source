@@ -22,7 +22,7 @@ else if($lastEventId == count($progress))
 }
 else
 {
-	//进度操作
+	//progress action
 	$addProgress = rand(1,20);
 	$progressId = $lastEventId + $addProgress;
 	$progressId > count($progress) and $progressId = count($progress);
