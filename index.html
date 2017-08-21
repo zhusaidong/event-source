@@ -6,10 +6,10 @@
 		</title>
 		<meta name="author" content="zsdroid">
 		<meta charset="utf-8">
-		<script src="EventSource.js?v=1">
+		<script src="EventSource.js">
 		</script>
 		<script>
-			var _$ = function(id)
+			var _$ = id =>
 			{
 				return document.querySelector(id);
 			};
@@ -20,20 +20,18 @@
 						{
 							//Custom Event
 							event:'ProgressEvent',
-							callback:function(data)
+							callback:(data,event) =>
 							{
 								_$(".progressInfo").innerHTML = data[0];
 								_$(".progress").value = data[0];
 								_$('.text').innerHTML += data[1] + ' => progress ' + data[0] + '%' + '<br />';
-								console.log(this,this.data,this.dataArray);
-							}
+								console.log(event,event.dataArray);
+							},
 						}
 						,
 						{
 							//default Event
-							callback:function(data)
-							{
-							}
+							callback:data => {}
 						}
 					]);
 			}

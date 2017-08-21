@@ -2,7 +2,7 @@
 EventSource
 	@author zsdroid
 */
-var _EventSource = function(sourceUrl,option)
+var _EventSource = (sourceUrl,option) =>
 {
 	if(typeof(EventSource) === "undefined")
 	{
@@ -10,7 +10,7 @@ var _EventSource = function(sourceUrl,option)
 	}
 	var source = new EventSource(sourceUrl);
 	//Custom Event
-	var customEvent = function(event,callback)
+	var customEvent = (event,callback) =>
 	{
 		source.addEventListener(event,function(event)
 			{
