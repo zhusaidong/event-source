@@ -6,11 +6,11 @@
 class EventSource
 {
 	/**
-	* @var $event 事件
+	* @var $event event
 	*/
 	private $event = NULL;
 	/**
-	* @var $data 数据
+	* @var $data data
 	*/
 	private $data = NULL;
 	/**
@@ -18,15 +18,15 @@ class EventSource
 	*/
 	private $id = NULL;
 	/**
-	* @var $retry 重复时间
+	* @var $retry try time
 	*/
 	private $retry = NULL;
 	
 	/**
-	* 设置event事件
-	* @param string $event 事件
+	* set event
+	* @param string $event event
 	* 
-	* @return EventSource EventSource对象
+	* @return EventSource EventSource Object
 	*/
 	public function setEvent($event = NULL)
 	{
@@ -34,10 +34,10 @@ class EventSource
 		return $this;
 	}
 	/**
-	* 设置data数据
-	* @param array|string $data 数据
+	* set data
+	* @param array|string $data data
 	* 
-	* @return EventSource EventSource对象
+	* @return EventSource EventSource Object
 	*/
 	public function setData($data = [])
 	{
@@ -46,10 +46,10 @@ class EventSource
 		return $this;
 	}
 	/**
-	* 设置LastEventId
+	* set LastEventId
 	* @param int $lastEventId LastEventId
 	* 
-	* @return EventSource EventSource对象
+	* @return EventSource EventSource Object
 	*/
 	public function setLastEventId($lastEventId = 1)
 	{
@@ -57,10 +57,10 @@ class EventSource
 		return $this;
 	}
 	/**
-	* 设置retry重复时间
-	* @param int $retry 重复时间
+	* set retry
+	* @param int $retry try time
 	* 
-	* @return EventSource EventSource对象
+	* @return EventSource EventSource Object
 	*/
 	public function setRetry($retry = 1000)
 	{

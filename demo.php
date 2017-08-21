@@ -3,9 +3,10 @@
 * EventSource demo
 * @author Zsdroid [635925926@qq.com]
 */
+
 require_once('EventSource.class.php');
 
-$time = date('Y-m-d H:i:s');
+$time = date('Y-m-d H:i:s',time());
 $progress = range(1,100);
 
 $eventSource = new EventSource;

@@ -17,7 +17,7 @@ var _EventSource = function(sourceUrl,option)
 				event.dataArray = event.data.split("\n");
 				callback.call(event,event.dataArray,event);
 			},false);
-	}
+	};
 	for(var e in option)
 	{
 		var event = option[e].event || null;
