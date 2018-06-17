@@ -4,18 +4,20 @@ an event-source demo
 
 	use event-source to make a progress bar of demo
 
-- ### demo 
+### what is event-source
 
-<a target="_blank" href="http://github.zhusaidong.cn/event-source/">demo</a>
+[EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
+
+### demo 
+
+[demo](http://github.zhusaidong.cn/event-source/)
 
 ![gif](https://raw.githubusercontent.com/zhusaidong/event-source/master/gif.gif)
 
-- ### how to use
+### usage
 
-this project simply encapsulates two files
-
-	EventSource.class.php
-<pre><code>
+- php
+```
 $eventSource = new EventSource;
 $lastEventId = $eventSource->getLastEventId();
 $eventSource
@@ -24,11 +26,11 @@ $eventSource
 	->setEvent('ProgressEvent')
 	->setRetry(1000)
 	->output();
-</code></pre>
+```
 
-	EventSource.js
+- js
 
-<pre><code>
+```
 _EventSource("demo.php",
 	[
 		{
@@ -46,4 +48,4 @@ _EventSource("demo.php",
 			}
 		}
 	]);
-</code></pre>
+```
