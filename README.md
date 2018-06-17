@@ -4,11 +4,13 @@ an event-source demo
 
 	use event-source to make a progress bar of demo
 
-### #demo 
+- ### demo 
 
 <a target="_blank" href="http://github.zhusaidong.cn/event-source/">demo</a>
 
-### #how to use
+![gif](https://raw.githubusercontent.com/zhusaidong/event-source/master/gif.gif)
+
+- ### how to use
 
 this project simply encapsulates two files
 
