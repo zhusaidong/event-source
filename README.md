@@ -4,6 +4,10 @@ an event-source demo
 
 	use event-source to make a progress bar of demo
 
+### application
+
++ scan qr-code to login
+
 ### what is event-source
 
 [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
